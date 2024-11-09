@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hks-deployment
+  labels:
+    app: lbnginx
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: lbnginx
+  template:
+    metadata:
+      labels:
+        app: lbnginx
+    spec:
+      containers:
+      - name: hks-app
+        image: hkshitesh/kubedemo:2.0
