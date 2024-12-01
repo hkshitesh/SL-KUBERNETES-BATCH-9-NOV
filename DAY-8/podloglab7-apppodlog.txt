@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: openshift
+  labels:
+    Podlabel: simplilearn
+spec:
+  containers:
+    - name: mycontainer
+      image: docker.io/openshift
+      ports:
+        - containerPort: 80
